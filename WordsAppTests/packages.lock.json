@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net9.0": {
+      "coverlet.collector": {
+        "type": "Direct",
+        "requested": "[6.0.2, )",
+        "resolved": "6.0.2",
+        "contentHash": "bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A=="
+      },
+      "Microsoft.NET.Test.Sdk": {
+        "type": "Direct",
+        "requested": "[17.12.0, )",
+        "resolved": "17.12.0",
+        "contentHash": "kt/PKBZ91rFCWxVIJZSgVLk+YR+4KxTuHf799ho8WNiK5ZQpJNAEZCAWX86vcKrs+DiYjiibpYKdGZP6+/N17w==",
+        "dependencies": {
+          "Microsoft.CodeCoverage": "17.12.0",
+          "Microsoft.TestPlatform.TestHost": "17.12.0"
+        }
+      },
+      "xunit.runner.visualstudio": {
+        "type": "Direct",
+        "requested": "[3.1.1, )",
+        "resolved": "3.1.1",
+        "contentHash": "gNu2zhnuwjq5vQlU4S7yK/lfaKZDLmtcu+vTjnhfTlMAUYn+Hmgu8IIX0UCwWepYkk+Szx03DHx1bDnc9Fd+9w=="
+      },
+      "xunit.v3": {
+        "type": "Direct",
+        "requested": "[2.0.3, )",
+        "resolved": "2.0.3",
+        "contentHash": "Zx2r5xnUgyAIhI3cvfKaAr7Mj0Enn0zFhaMoTJ2hRYEPJlqlllUkTUvBBYalZQvpXGub/UQWq1nY5erD7Zv1cA==",
+        "dependencies": {
+          "xunit.analyzers": "1.22.0",
+          "xunit.v3.assert": "[2.0.3]",
+          "xunit.v3.core": "[2.0.3]"
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg=="
+      },
+      "Microsoft.CodeCoverage": {
+        "type": "Transitive",
+        "resolved": "17.12.0",
+        "contentHash": "4svMznBd5JM21JIG2xZKGNanAHNXplxf/kQDFfLHXQ3OnpJkayRK/TjacFjA+EYmoyuNXHo/sOETEfcYtAzIrA=="
+      },
+      "Microsoft.Testing.Extensions.TrxReport.Abstractions": {
+        "type": "Transitive",
+        "resolved": "1.6.3",
+        "contentHash": "0MdowM+3IDVWE5VBzVe9NvxsE4caSbM3fO+jlWVzEBr/Vnc3BWx+uV/Ex0dLLpkxkeUKH2gGWTNLb39rw3DDqw==",
+        "dependencies": {
+          "Microsoft.Testing.Platform": "1.6.3"
+        }
+      },
+      "Microsoft.Testing.Platform": {
+        "type": "Transitive",
+        "resolved": "1.6.3",
+        "contentHash": "DqMZukaPo+vKzColfqd1I5qZebfISZT6ND70AOem/dYQmHsaMN0xg/JG7E0e80rwfxL7wAA4ylSg8j6KJf1Tuw=="
+      },
+      "Microsoft.Testing.Platform.MSBuild": {
+        "type": "Transitive",
+        "resolved": "1.6.3",
+        "contentHash": "PXSYI5Iae29GM5636zOL8PlQD1YyOa9cfzfYLR43hrLjjK7RDJgMTvgAet3oZLgDTvz6pbzABZvhx+S/W5m8YA==",
+        "dependencies": {
+          "Microsoft.Testing.Platform": "1.6.3"
+        }
+      },
+      "Microsoft.TestPlatform.ObjectModel": {
+        "type": "Transitive",
+        "resolved": "17.12.0",
+        "contentHash": "TDqkTKLfQuAaPcEb3pDDWnh7b3SyZF+/W9OZvWFp6eJCIiiYFdSB6taE2I6tWrFw5ywhzOb6sreoGJTI6m3rSQ==",
+        "dependencies": {
+          "System.Reflection.Metadata": "1.6.0"
+        }
+      },
+      "Microsoft.TestPlatform.TestHost": {
+        "type": "Transitive",
+        "resolved": "17.12.0",
+        "contentHash": "MiPEJQNyADfwZ4pJNpQex+t9/jOClBGMiCiVVFuELCMSX2nmNfvUor3uFVxNNCg30uxDP8JDYfPnMXQzsfzYyg==",
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "17.12.0",
+          "Newtonsoft.Json": "13.0.1"
+        }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.1",
+        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+      },
+      "System.Reflection.Metadata": {
+        "type": "Transitive",
+        "resolved": "1.6.0",
+        "contentHash": "COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ=="
+      },
+      "xunit.analyzers": {
+        "type": "Transitive",
+        "resolved": "1.22.0",
+        "contentHash": "MXTmnlJLQPSJfgxibeFgpUP5sj+3649BWkf3WgeUhAVUrI3nXzWE+BGH4OPfWkG2Q5x0SzIKgegikNhnfMgaXQ=="
+      },
+      "xunit.v3.assert": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "6uTT9zLyg7YtP8fAZqOFcCpeGXtsh6K1+QVHHJl/aoQObr2qHvhGMuZbm5UYf4z49ytpQt6NzP6Iq4uWEBBh4g=="
+      },
+      "xunit.v3.common": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "u3kTB9Fqo6X8keccsW4Zkn87nQNxMNZGm1rjJjCC0yThKP77N8H52Fx6CaochjGeGzEc2w9CUDu7C2ygu61bYg==",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+        }
+      },
+      "xunit.v3.core": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "KN2xOHNVGXI6AsPKatV9urqVs2YIGQ+2klY6HLys/oQauBVoS2W2+BRZz1rnwoJ+5aK+2+gfe1rLKi8iInT9Ow==",
+        "dependencies": {
+          "Microsoft.Testing.Platform.MSBuild": "1.6.3",
+          "xunit.v3.extensibility.core": "[2.0.3]",
+          "xunit.v3.runner.inproc.console": "[2.0.3]"
+        }
+      },
+      "xunit.v3.extensibility.core": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "1uxfWR72veq0b5/3ghEA2zRAkdqmnA9ahCxWr1VEb2q6MBNKx6aHsAL85PyY172f1dsvUMqh7BSelaHsR5Df5w==",
+        "dependencies": {
+          "xunit.v3.common": "[2.0.3]"
+        }
+      },
+      "xunit.v3.runner.common": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "Q+43ogqiJlWOG3l6Me7iNTm68CvVdX16OsHDoQcKCUEvWXHyiSRGBkcmMAT3OVENH0wS69QHi0q4mb3VsAbclA==",
+        "dependencies": {
+          "xunit.v3.common": "[2.0.3]"
+        }
+      },
+      "xunit.v3.runner.inproc.console": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "S65IrpHbt9nHotyfs6MnjNsc8bZUMBLHHJcyky4ywDNKx+k07sjwaGb+otLQA4Z6FPCGIPrL7u0ThQm76FxBZw==",
+        "dependencies": {
+          "Microsoft.Testing.Extensions.TrxReport.Abstractions": "1.6.3",
+          "Microsoft.Testing.Platform": "1.6.3",
+          "xunit.v3.extensibility.core": "[2.0.3]",
+          "xunit.v3.runner.common": "[2.0.3]"
+        }
+      },
+      "wordsapp": {
+        "type": "Project"
+      }
+    }
+  }
+}
