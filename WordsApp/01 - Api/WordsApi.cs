@@ -1,4 +1,4 @@
-using WordsApp.Business;
+using WordsApp.Features;
 
 namespace WordsApp.Api;
 

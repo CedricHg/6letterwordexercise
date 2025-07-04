@@ -1,4 +1,4 @@
-using WordsApp.Business;
+using WordsApp.Features;
 
 namespace WordsApp.Api;
 
@@ -23,11 +23,11 @@ public class WordsApiTests
         Assert.True(_comparer.Equals(expectedResponse, response));
     }
 
-    public static IEnumerable<TheoryDataRow<Business.GetCombinationsRequest, Business.GetCombinationsResponse>> TestData
+    public static IEnumerable<TheoryDataRow<Features.GetCombinationsRequest, Features.GetCombinationsResponse>> TestData
     {
         get
         {
-            yield return (new Business.GetCombinationsRequest(["foobar", "fo", "o", "bar"]), new Business.GetCombinationsResponse(["fo", "o", "bar"], "foobar"));
+            yield return (new Features.GetCombinationsRequest(["foobar", "fo", "o", "bar"]), new Features.GetCombinationsResponse(["fo", "o", "bar"], "foobar"));
         }
     }
 }

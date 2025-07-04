@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace WordsApp.Business;
+namespace WordsApp.Features;
 
 public record GetCombinationsResponse(string[] Parts, string FullWord);
 
