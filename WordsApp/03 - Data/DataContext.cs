@@ -2,12 +2,14 @@ namespace WordsApp.Data;
 
 public class DataContext : IDataContext
 {
-    private readonly string[] _words;
+    private readonly Word[] _words;
 
     public DataContext()
     {
-        _words = File.ReadAllLines("input.txt");
+        var wordStrings = File.ReadAllLines("input.txt");
+        _words = wordStrings.Select(x => new Word(x)).ToArray();
     }
 
-    public IReadOnlyList<string> Words => _words;
+    public IReadOnlyList<Word> Words => _words;
+    public int SettingNumOfCharsInFullWord => 6;
 }
