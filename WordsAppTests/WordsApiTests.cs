@@ -9,7 +9,7 @@ public class WordsApiTests
 
     public WordsApiTests()
     {
-        _api = new WordsApi();
+        _api = new WordsApi(new FakeDataContext());
         _comparer = new GetCombinationsResponseEqualityComparer();
     }
 
@@ -23,11 +23,13 @@ public class WordsApiTests
         Assert.True(_comparer.Equals(expectedResponse, response));
     }
 
-    public static IEnumerable<TheoryDataRow<Features.GetCombinationsRequest, Features.GetCombinationsResponse>> TestData
+    public static IEnumerable<TheoryDataRow<GetCombinationsRequest, GetCombinationsResponse>> TestData
     {
         get
         {
-            yield return (new Features.GetCombinationsRequest(["foobar", "fo", "o", "bar"]), new Features.GetCombinationsResponse(["fo", "o", "bar"], "foobar"));
+            yield return (new GetCombinationsRequest(["foobar", "o", "bar", "fo"]), new GetCombinationsResponse(["fo", "o", "bar"], "foobar"));
+            yield return (new GetCombinationsRequest(["dicing", "icing", "d"]), new GetCombinationsResponse(["d", "icing"], "dicing"));
+            yield return (new GetCombinationsRequest(["wander", "er", "d", "wan"]), new GetCombinationsResponse(["wan", "d", "er"], "wander"));
         }
     }
 }

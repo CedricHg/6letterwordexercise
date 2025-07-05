@@ -2,5 +2,6 @@ namespace WordsApp.Data;
 
 public interface IDataContext
 {
-    IReadOnlyList<string> Words { get; }
+    IReadOnlyList<Word> Words { get; }
+    int SettingNumOfCharsInFullWord { get; }
 }
