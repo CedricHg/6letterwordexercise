@@ -6,20 +6,6 @@ public class GetCombinationsQueryHandler(IDataContext context)
 {
     public Result<GetCombinationsResponse> Handle(GetCombinationsRequest request)
     {
-        try
-        {
-            return InnerHandle(request);
-        }
-        catch (Exception e)
-        {
-            return Result<GetCombinationsResponse>.Failure($"{e.Message} - STACKTRACE: {e.StackTrace}");
-            // In production you'd just do this
-            //return Result<GetCombinationsResponse>.Failure(e.Message);
-        }
-    }
-
-    private Result<GetCombinationsResponse> InnerHandle(GetCombinationsRequest request)
-    {
         // if we would use something like mediatr this validator would be part of the pipeline, keeping it simple now
         var validator = new GetCombinationsQueryValidator(context, request);
         if (validator.Errors.Any())

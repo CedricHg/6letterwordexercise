@@ -23,7 +23,6 @@ public class GetCombinationsResponseEqualityComparer : IEqualityComparer<GetComb
             return false;
         }
 
-        // TODO could make this more flexible so the objects are still equal if their word parts are in different order
         for (int i = 0; i < x.Parts.Length; i++)
         {
             if (x.Parts[i] != y.Parts[i])

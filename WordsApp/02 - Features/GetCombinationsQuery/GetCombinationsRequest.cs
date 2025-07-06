@@ -1,2 +1,2 @@
 namespace WordsApp.Features;
-public record GetCombinationsRequest(string[] InputWords);
+public record GetCombinationsRequest(IEnumerable<string> InputWords);

@@ -1,6 +1,7 @@
+using WordsApp.Api;
 using WordsApp.Features;
 
-namespace WordsApp.Api;
+namespace WordsAppTests;
 
 public class WordsApiTests
 {
@@ -14,13 +15,15 @@ public class WordsApiTests
     }
 
     [Theory]
-    [MemberData(nameof(TestData))]
+    [MemberData(nameof(TestData))] // TODO apparently this shows all the test cases as 1 test, so if something fails it's kinda unclear what - inlinedata might be better
     public void IsCorrectResponse(GetCombinationsRequest request, GetCombinationsResponse expectedResponse)
     {
-        var response = _api.GetCombinations(request);
+        var result = _api.GetCombinations(request);
+        Assert.True(result.Success);
+        Assert.NotNull(result.Data);
         // TODO writing a custom comparer is a neat exercise and all, but we don't really get much detailed information about the differences when the objects aren't equal, requiring debugging
         // better use something like FluentAssertions (or Shouldly if that supports Equivalent check by now..)
-        Assert.True(_comparer.Equals(expectedResponse, response));
+        Assert.True(_comparer.Equals(expectedResponse, result.Data));
     }
 
     public static IEnumerable<TheoryDataRow<GetCombinationsRequest, GetCombinationsResponse>> TestData

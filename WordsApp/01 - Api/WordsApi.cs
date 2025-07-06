@@ -3,17 +3,35 @@ using WordsApp.Features;
 
 namespace WordsApp.Api;
 
-public class WordsApi(IDataContext dataContext)
+public class WordsApi
 {
-    public GetCombinationsResponse GetCombinations(GetCombinationsRequest request)
+    private readonly IDataContext _dataContext;
+    private bool isDevEnvironment = true; // TODO read from some appsetting
+    
+    public WordsApi(IDataContext dataContext)
     {
-        var result = new GetCombinationsQueryHandler(dataContext).Handle(request);
+        _dataContext = dataContext;
+    }
 
-        if (result.Success)
+    public WordsApi()
+    {
+        _dataContext = new DataContext();
+    }
+
+    public Result<GetCombinationsResponse> GetCombinations(GetCombinationsRequest request)
+    {
+        try
         {
-            return result.Data!;
+            return new GetCombinationsQueryHandler(_dataContext).Handle(request);
+        }
+        catch (Exception e)
+        {
+            // TODO move exception handling to an attribute or something so it's more implicit
+
+            return isDevEnvironment
+                ? Result<GetCombinationsResponse>.Failure($"{e.Message} - STACKTRACE: {e.StackTrace}")
+                : Result<GetCombinationsResponse>.Failure(e.Message);
         }
 
-        throw new InvalidOperationException(result.ErrorMessage);
     }
 }
