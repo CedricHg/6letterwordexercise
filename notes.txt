@@ -1,0 +1,14 @@
+Obviously this is a bit of an overengineered solution for a straightforward problem, I suppose it should be seen as a portfolio/simulation of more or less how I'd set up a "real" API.
+
+I could keep going chasing the 'perfection' dragon - things to improve are:
+- just feed the problem into an LLM and let it figure things out lol (tried this as a laugh and it actually does work correctly)
+
+no but really:
+- The console input now requires the passing in of both the full word and all of its parts. It would be cooler if only the full word was needed and the application, by checking the input.txt,
+just figures out which parts can be combined. If it were to work like this, some alterations for performance optimization would probably be necessary.
+- Add appsettings to indicate the Environment (i.e. Local vs DV vs QA vs Prod)
+- The amount of characters needed for the full word (6) might also belong more in the appsetting than as a constant value in the DataContext
+- Put uncaught exception handling on the API in an attribute/pipeline (in reality with ASP.NET it would be middleware)
+- Add information logging so we can trace in detail how the algorithm works
+- The WordsApiTests uses Xunit v3 with TheoryDataRow. Truth be told I hadn't used this before this exercise and wanted to try it out. I notice it has some annoying shortcomings.
+- Using a custom IEqualityComparer on the response object makes the test itself nice and readable, but test error output isn't clear on where exactly the comparison fails.

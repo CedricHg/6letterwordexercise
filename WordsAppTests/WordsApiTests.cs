@@ -1,6 +1,7 @@
+using WordsApp.Api;
 using WordsApp.Features;
 
-namespace WordsApp.Api;
+namespace WordsAppTests;
 
 public class WordsApiTests
 {
