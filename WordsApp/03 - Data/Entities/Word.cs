@@ -34,4 +34,9 @@ public class Word
             .Select(x => x.Part)
             .ToArray();
     }
+
+    public override string ToString()
+    {
+        return Value;
+    }
 }
